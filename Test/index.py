@@ -1,12 +1,12 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 
-user_name="田中　一郎"
+user_name=input("名前入力　＞＞")
 
 #メニューを表示
 @app.route("/")
 def menu():
-    return render_template("index.html", user_name = user_name)
+    return render_template("kensaku.html")
 
 #マイページ
 @app.route("/mypage")
