@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
-  <title>Search</title>
+  <title>{{ title }}</title>
 
   <style>
   .collection {
     border: 1px solid transparent;
+  }
+
+  .font{
+    font-size: 12px;
+  }
+
+  .under{
+    margin-right: 1rem;
+  }
+
+  .under:hover{
+    text-decoration: underline;
+  }
+
+  .box{
+    margin: auto 1rem;
+    padding: 0.5rem 1.3rem;
+    border-radius: 10px;
+    border: solid 2px #fff;
+    /*transition: all 0.3s ease 0s;*/
+  }
+
+  .box:hover{
+    opacity: 0.6;
   }
   </style>
 </head>
@@ -19,7 +43,15 @@
   <header>
     <nav>
       <div class="nav-wrapper blue lighten-1">
-        <a href="#" class="brand-logo">Kinta</a>
+        <a href="/" class="brand-logo center">Kinta</a>
+        <div class="right font">
+          {% if login_status == false %}
+          <a href="#" class="box">ユーザ登録</a>
+          <a href="#" class="under">ログイン</a>
+          {% else %}
+          <a href="##">マイページ</a>
+          {% endif %}
+        </div>
       </div>
     </nav>
   </header>
