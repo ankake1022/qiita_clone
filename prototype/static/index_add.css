@@ -1,0 +1,27 @@
+.collection {
+    border: 1px solid transparent;
+  }
+
+  .font{
+    font-size: 12px;
+  }
+
+  .under{
+    margin-right: 1rem;
+  }
+
+  .under:hover{
+    text-decoration: underline;
+  }
+
+  .box{
+    margin: auto 1rem;
+    padding: 0.5rem 1.3rem;
+    border-radius: 10px;
+    border: solid 2px #fff;
+    /*transition: all 0.3s ease 0s;*/
+  }
+
+  .box:hover{
+    opacity: 0.6;
+  }
